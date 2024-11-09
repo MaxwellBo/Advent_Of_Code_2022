@@ -57,7 +57,7 @@ def iterate(f, x, *args, **kwds):
     "Yield x, f(x), f(f(x)), ..."
     yield x
     while True:
-        x = f(arg, *args, **kwds)
+        x = f(x, *args, **kwds)
         yield x
 
 def iterate_n(n, f, x, *args, **kwds):
